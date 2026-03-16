@@ -41,5 +41,6 @@ transition:0.25s;
 
 .links a:hover{
 background:rgba(255,255,255,0.18);
+border:1px solid rgba(255,255,255,0.35);
 transform:scale(1.05);
 }

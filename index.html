@@ -8,7 +8,7 @@
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-<!-- Font Awesome for icons -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- Custom CSS -->
@@ -20,19 +20,25 @@
 <!-- Snow background -->
 <div id="particles-js"></div>
 
-<div class="container">
+<!-- Intro overlay -->
+<div id="intro">
+  <div class="intro-content">
+    <h1>Click to Enter</h1>
+    <p>Welcome to lawin.lol</p>
+  </div>
+</div>
+
+<!-- Main content hidden at start -->
+<div class="container" id="main-content" style="display:none;">
 
 <h1>/home/lawin</h1>
 
-<!-- Glowing avatar -->
 <img class="avatar" src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Avatar">
 
-<!-- Music player -->
 <audio controls autoplay loop>
-<source src="https://files.catbox.moe/8fij9c.mp3" type="audio/mpeg">
+  <source src="https://files.catbox.moe/8fij9c.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Glass buttons -->
 <div class="links">
   <a href="#"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
   <a href="#"><i class="fa-solid fa-play"></i> Playlists</a>
@@ -43,9 +49,8 @@
 
 </div>
 
-<!-- Particles.js library -->
+<!-- Particles.js -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
 <script>
 particlesJS("particles-js", {
   "particles": {
@@ -55,6 +60,28 @@ particlesJS("particles-js", {
     "opacity": { "value": 0.8 },
     "line_linked": { "enable": false }
   }
+});
+</script>
+
+<!-- Intro click script -->
+<script>
+const intro = document.getElementById('intro');
+const mainContent = document.getElementById('main-content');
+
+intro.addEventListener('click', () => {
+  // Add fade-out effect
+  intro.style.opacity = 0;
+  intro.style.transition = 'opacity 1s ease';
+  
+  setTimeout(() => {
+    intro.style.display = 'none';
+    mainContent.style.display = 'block';
+    mainContent.style.opacity = 0;
+    mainContent.style.transition = 'opacity 1s ease';
+    setTimeout(() => {
+      mainContent.style.opacity = 1;
+    }, 50);
+  }, 1000);
 });
 </script>
 

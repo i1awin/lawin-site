@@ -24,12 +24,11 @@
 <div id="intro">
   <div class="intro-content">
     <h1>Click to Enter</h1>
-    <p>Welcome to lawin.lol</p>
   </div>
 </div>
 
-<!-- Main content hidden at start -->
-<div class="container" id="main-content" style="display:none;">
+<!-- Main content hidden initially -->
+<div class="container" id="main-content" style="opacity:0; display:flex; flex-direction:column; align-items:center;">
 
 <h1>/home/lawin</h1>
 
@@ -63,24 +62,21 @@ particlesJS("particles-js", {
 });
 </script>
 
-<!-- Intro click script -->
+<!-- Fixed intro click script -->
 <script>
 const intro = document.getElementById('intro');
 const mainContent = document.getElementById('main-content');
 
 intro.addEventListener('click', () => {
-  // Add fade-out effect
-  intro.style.opacity = 0;
+  // Fade out intro
   intro.style.transition = 'opacity 1s ease';
-  
+  intro.style.opacity = '0';
+
+  // Fade in main content after fade out
   setTimeout(() => {
     intro.style.display = 'none';
-    mainContent.style.display = 'block';
-    mainContent.style.opacity = 0;
     mainContent.style.transition = 'opacity 1s ease';
-    setTimeout(() => {
-      mainContent.style.opacity = 1;
-    }, 50);
+    mainContent.style.opacity = '1';
   }, 1000);
 });
 </script>

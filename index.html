@@ -1,48 +1,60 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>lawin</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Custom CSS -->
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- Snow background -->
 <div id="particles-js"></div>
 
 <div class="container">
 
 <h1>/home/lawin</h1>
 
-<img class="avatar" src="https://avatars.githubusercontent.com/u/583231?v=4">
+<!-- Glowing avatar -->
+<img class="avatar" src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Avatar">
 
+<!-- Music player -->
 <audio controls autoplay loop>
 <source src="https://files.catbox.moe/8fij9c.mp3" type="audio/mpeg">
 </audio>
 
+<!-- Glass buttons -->
 <div class="links">
-
-<a href="#">SoundCloud</a>
-<a href="#">Playlists</a>
-<a href="#">Telegram</a>
-<a href="#">Github</a>
-<a href="#">Steam</a>
-
+  <a href="#"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+  <a href="#"><i class="fa-solid fa-play"></i> Playlists</a>
+  <a href="#"><i class="fa-brands fa-telegram"></i> Telegram</a>
+  <a href="#"><i class="fa-brands fa-github"></i> Github</a>
+  <a href="#"><i class="fa-brands fa-steam"></i> Steam</a>
 </div>
 
 </div>
 
+<!-- Particles.js library -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
 particlesJS("particles-js", {
-particles: {
-number: { value: 120 },
-size: { value: 3 },
-move: { speed: 1 },
-opacity: { value: 0.8 },
-line_linked: { enable: false }
-}
+  "particles": {
+    "number": { "value": 120 },
+    "size": { "value": 3 },
+    "move": { "speed": 0.6 },
+    "opacity": { "value": 0.8 },
+    "line_linked": { "enable": false }
+  }
 });
 </script>
 
